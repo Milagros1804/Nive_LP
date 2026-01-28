@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semana 1 - Fundamentos de C</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="week-styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Highlight.js para resaltado de código -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/cpp.min.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="index.html" style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 0.5rem;">
+                    <span class="bracket">&lt;</span>
+                    <span class="logo-text">Nivelación C++</span>
+                    <span class="bracket">/&gt;</span>
+                </a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">← Volver</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="week-content">
+        <div class="container">
+            <div class="week-header-section">
+                <div class="week-badge">Semana 01</div>
+                <h1 class="week-main-title">Fundamentos de C</h1>
+                <p class="week-intro">Introducción a la sintaxis básica, variables y tipos de datos en C</p>
+            </div>
+
+            <!-- Ejercicio 1 -->
+            <section class="exercise">
+                <div class="exercise-header">
+                    <h2 class="exercise-title">
+                        <span class="exercise-number">Ejercicio 1:</span>
+                        Hola Mundo
+                    </h2>
+                    <span class="exercise-tag">Básico</span>
+                </div>
+
+                <div class="exercise-description">
+                    <p>Programa básico que imprime "Hola Mundo" en la consola. Este es el primer programa tradicional en cualquier lenguaje de programación.</p>
+                </div>
+
+                <div class="code-container">
+                    <div class="code-header">
+                        <span class="code-title">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <path d="M14 2H2C1.44772 2 1 2.44772 1 3V13C1 13.5523 1.44772 14 2 14H14C14.5523 14 15 13.5523 15 13V3C15 2.44772 14.5523 2 14 2Z" stroke="currentColor" stroke-width="1.5"/>
+                                <path d="M5 6L7 8L5 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M9 10H11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                            </svg>
+                            hola_mundo.c
+                        </span>
+                        <button class="copy-btn" onclick="copyCode(this)">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                                <rect x="9" y="9" width="13" height="13" rx="2" stroke="currentColor" stroke-width="2"/>
+                                <path d="M5 15H4C2.89543 15 2 14.1046 2 13V4C2 2.89543 2.89543 2 4 2H13C14.1046 2 15 2.89543 15 4V5" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                            Copiar
+                        </button>
+                    </div>
+                    <pre><code class="language-cpp">#include &lt;stdio.h&gt;
+
+int main() {
+    printf("Hola Mundo\n");
+    return 0;
+}</code></pre>
+                </div>
+
+                <div class="output-container">
+                    <div class="output-header">
+                        <span class="output-title">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <rect x="2" y="3" width="12" height="10" rx="1" stroke="currentColor" stroke-width="1.5"/>
+                                <path d="M5 1V3M11 1V3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                            </svg>
+                            Salida
+                        </span>
+                    </div>
+                    <pre class="output-content">Hola Mundo</pre>
+                </div>
+
+                <div class="explanation">
+                    <h3>💡 Explicación:</h3>
+                    <ul>
+                        <li><code>#include &lt;stdio.h&gt;</code> - Incluye la librería estándar de entrada/salida</li>
+                        <li><code>int main()</code> - Función principal del programa</li>
+                        <li><code>printf()</code> - Función para imprimir texto en pantalla</li>
+                        <li><code>return 0</code> - Indica que el programa terminó correctamente</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Ejercicio 2 -->
+            <section class="exercise">
+                <div class="exercise-header">
+                    <h2 class="exercise-title">
+                        <span class="exercise-number">Ejercicio 2:</span>
+                        Variables y Tipos de Datos
+                    </h2>
+                    <span class="exercise-tag">Básico</span>
+                </div>
+
+                <div class="exercise-description">
+                    <p>Programa que demuestra el uso de diferentes tipos de datos: enteros, flotantes y caracteres.</p>
+                </div>
+
+                <div class="code-container">
+                    <div class="code-header">
+                        <span class="code-title">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <path d="M14 2H2C1.44772 2 1 2.44772 1 3V13C1 13.5523 1.44772 14 2 14H14C14.5523 14 15 13.5523 15 13V3C15 2.44772 14.5523 2 14 2Z" stroke="currentColor" stroke-width="1.5"/>
+                                <path d="M5 6L7 8L5 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M9 10H11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                            </svg>
+                            variables.c
+                        </span>
+                        <button class="copy-btn" onclick="copyCode(this)">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                                <rect x="9" y="9" width="13" height="13" rx="2" stroke="currentColor" stroke-width="2"/>
+                                <path d="M5 15H4C2.89543 15 2 14.1046 2 13V4C2 2.89543 2.89543 2 4 2H13C14.1046 2 15 2.89543 15 4V5" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                            Copiar
+                        </button>
+                    </div>
+                    <pre><code class="language-cpp">#include &lt;stdio.h&gt;
+
+int main() {
+    // Declaración de variables
+    int edad = 20;
+    float promedio = 16.5;
+    char inicial = 'M';
+    
+    // Imprimir valores
+    printf("Edad: %d años\n", edad);
+    printf("Promedio: %.1f\n", promedio);
+    printf("Inicial: %c\n", inicial);
+    
+    return 0;
+}</code></pre>
+                </div>
+
+                <div class="output-container">
+                    <div class="output-header">
+                        <span class="output-title">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <rect x="2" y="3" width="12" height="10" rx="1" stroke="currentColor" stroke-width="1.5"/>
+                                <path d="M5 1V3M11 1V3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                            </svg>
+                            Salida
+                        </span>
+                    </div>
+                    <pre class="output-content">Edad: 20 años
+Promedio: 16.5
+Inicial: M</pre>
+                </div>
+
+                <div class="explanation">
+                    <h3>💡 Explicación:</h3>
+                    <ul>
+                        <li><code>int</code> - Tipo de dato para números enteros</li>
+                        <li><code>float</code> - Tipo de dato para números decimales</li>
+                        <li><code>char</code> - Tipo de dato para caracteres individuales</li>
+                        <li><code>%d, %f, %c</code> - Especificadores de formato para printf()</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Ejercicio 3 -->
+            <section class="exercise">
+                <div class="exercise-header">
+                    <h2 class="exercise-title">
+                        <span class="exercise-number">Ejercicio 3:</span>
+                        Operaciones Matemáticas
+                    </h2>
+                    <span class="exercise-tag">Básico</span>
+                </div>
+
+                <div class="exercise-description">
+                    <p>Programa que realiza operaciones matemáticas básicas entre dos números.</p>
+                </div>
+
+                <div class="code-container">
+                    <div class="code-header">
+                        <span class="code-title">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <path d="M14 2H2C1.44772 2 1 2.44772 1 3V13C1 13.5523 1.44772 14 2 14H14C14.5523 14 15 13.5523 15 13V3C15 2.44772 14.5523 2 14 2Z" stroke="currentColor" stroke-width="1.5"/>
+                                <path d="M5 6L7 8L5 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M9 10H11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                            </svg>
+                            operaciones.c
+                        </span>
+                        <button class="copy-btn" onclick="copyCode(this)">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                                <rect x="9" y="9" width="13" height="13" rx="2" stroke="currentColor" stroke-width="2"/>
+                                <path d="M5 15H4C2.89543 15 2 14.1046 2 13V4C2 2.89543 2.89543 2 4 2H13C14.1046 2 15 2.89543 15 4V5" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                            Copiar
+                        </button>
+                    </div>
+                    <pre><code class="language-cpp">#include &lt;stdio.h&gt;
+
+int main() {
+    int a = 10, b = 3;
+    
+    printf("Suma: %d + %d = %d\n", a, b, a + b);
+    printf("Resta: %d - %d = %d\n", a, b, a - b);
+    printf("Multiplicación: %d * %d = %d\n", a, b, a * b);
+    printf("División: %d / %d = %d\n", a, b, a / b);
+    printf("Módulo: %d %% %d = %d\n", a, b, a % b);
+    
+    return 0;
+}</code></pre>
+                </div>
+
+                <div class="output-container">
+                    <div class="output-header">
+                        <span class="output-title">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <rect x="2" y="3" width="12" height="10" rx="1" stroke="currentColor" stroke-width="1.5"/>
+                                <path d="M5 1V3M11 1V3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                            </svg>
+                            Salida
+                        </span>
+                    </div>
+                    <pre class="output-content">Suma: 10 + 3 = 13
+Resta: 10 - 3 = 7
+Multiplicación: 10 * 3 = 30
+División: 10 / 3 = 3
+Módulo: 10 % 3 = 1</pre>
+                </div>
+
+                <div class="explanation">
+                    <h3>💡 Explicación:</h3>
+                    <ul>
+                        <li><code>+</code> - Operador de suma</li>
+                        <li><code>-</code> - Operador de resta</li>
+                        <li><code>*</code> - Operador de multiplicación</li>
+                        <li><code>/</code> - Operador de división (división entera entre enteros)</li>
+                        <li><code>%</code> - Operador módulo (resto de la división)</li>
+                    </ul>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-text">
+                <span class="comment">// Semana 1 - Fundamentos de C</span><br>
+                <span class="comment">// Curso de Nivelación 2026</span>
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Inicializar highlight.js
+        hljs.highlightAll();
+
+        // Función para copiar código
+        function copyCode(button) {
+            const codeBlock = button.closest('.code-container').querySelector('code');
+            const code = codeBlock.textContent;
+            
+            navigator.clipboard.writeText(code).then(() => {
+                const originalText = button.innerHTML;
+                button.innerHTML = `
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                        <path d="M20 6L9 17L4 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    Copiado!
+                `;
+                button.classList.add('copied');
+                
+                setTimeout(() => {
+                    button.innerHTML = originalText;
+                    button.classList.remove('copied');
+                }, 2000);
+            });
+        }
+    </script>
+</body>
+</html>

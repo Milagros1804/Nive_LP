@@ -1,0 +1,976 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semana 2 - Estructuras de Control</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="week-styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/cpp.min.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="index.html" style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 0.5rem;">
+                    <span class="bracket">&lt;</span>
+                    <span class="logo-text">Nivelación C++</span>
+                    <span class="bracket">/&gt;</span>
+                </a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">← Volver</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="week-content">
+        <div class="container">
+            <div class="week-header-section">
+                <div class="week-badge">Semana 02</div>
+                <h1 class="week-main-title">Estructuras de Control</h1>
+                <p class="week-intro">10 ejercicios prácticos - Condicionales, bucles y estructuras de control</p>
+            </div>
+
+            <!-- EJERCICIO 1 -->
+            <section class="exercise">
+                <div class="exercise-header">
+                    <h2 class="exercise-title">
+                        <span class="exercise-number">Ejercicio 1:</span>
+                        Suma de Números Pares
+                    </h2>
+                    <span class="exercise-tag">Básico</span>
+                </div>
+
+                <div class="exercise-description">
+                    <p>Programa que calcula la suma de todos los números pares desde 2 hasta N usando un bucle for con incremento de 2.</p>
+                </div>
+
+                <div class="code-container">
+                    <div class="code-header">
+                        <span class="code-title">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <path d="M14 2H2C1.44772 2 1 2.44772 1 3V13C1 13.5523 1.44772 14 2 14H14C14.5523 14 15 13.5523 15 13V3C15 2.44772 14.5523 2 14 2Z" stroke="currentColor" stroke-width="1.5"/>
+                                <path d="M5 6L7 8L5 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M9 10H11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                            </svg>
+                            ejercicio1.c
+                        </span>
+                        <button class="copy-btn" onclick="copyCode(this)">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                                <rect x="9" y="9" width="13" height="13" rx="2" stroke="currentColor" stroke-width="2"/>
+                                <path d="M5 15H4C2.89543 15 2 14.1046 2 13V4C2 2.89543 2.89543 2 4 2H13C14.1046 2 15 2.89543 15 4V5" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                            Copiar
+                        </button>
+                    </div>
+                    <pre><code class="language-cpp">#include &lt;stdio.h&gt;
+int main() {
+    int n, suma = 0;
+    
+    printf("Ingrese N: ");
+    scanf("%d", &amp;n);
+    
+    // Metodo 1: Incremento de 2
+    for (int i = 2; i &lt;= n; i += 2) {
+        suma += i;
+    }
+    
+    printf("Suma: %d\n", suma);
+    
+    return 0;
+}</code></pre>
+                </div>
+
+                <div class="output-container">
+                    <div class="output-header">
+                        <span class="output-title">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <rect x="2" y="3" width="12" height="10" rx="1" stroke="currentColor" stroke-width="1.5"/>
+                                <path d="M5 1V3M11 1V3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                            </svg>
+                            Salida
+                        </span>
+                    </div>
+                    <pre class="output-content">Ingrese N: 10
+Suma: 30</pre>
+                </div>
+            </section>
+
+            <!-- EJERCICIO 2 -->
+            <section class="exercise">
+                <div class="exercise-header">
+                    <h2 class="exercise-title">
+                        <span class="exercise-number">Ejercicio 2:</span>
+                        Clasificación de Notas
+                    </h2>
+                    <span class="exercise-tag">Básico</span>
+                </div>
+
+                <div class="exercise-description">
+                    <p>Sistema de clasificación de notas que asigna letras según el rango de calificación (0-20) con validación de entrada.</p>
+                </div>
+
+                <div class="code-container">
+                    <div class="code-header">
+                        <span class="code-title">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <path d="M14 2H2C1.44772 2 1 2.44772 1 3V13C1 13.5523 1.44772 14 2 14H14C14.5523 14 15 13.5523 15 13V3C15 2.44772 14.5523 2 14 2Z" stroke="currentColor" stroke-width="1.5"/>
+                                <path d="M5 6L7 8L5 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M9 10H11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                            </svg>
+                            ejercicio2.c
+                        </span>
+                        <button class="copy-btn" onclick="copyCode(this)">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                                <rect x="9" y="9" width="13" height="13" rx="2" stroke="currentColor" stroke-width="2"/>
+                                <path d="M5 15H4C2.89543 15 2 14.1046 2 13V4C2 2.89543 2.89543 2 4 2H13C14.1046 2 15 2.89543 15 4V5" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                            Copiar
+                        </button>
+                    </div>
+                    <pre><code class="language-cpp">#include &lt;stdio.h&gt;
+int main() {
+    int nota;
+    
+    printf("Ingrese la nota (0-20): ");
+    scanf("%d", &amp;nota);
+    
+    if (nota &lt; 0 || nota &gt; 20) {
+        printf("Error: Nota fuera de rango\n");
+    } else if (nota &gt;= 18) {
+        printf("A - Excelente\n");
+    } else if (nota &gt;= 15) {
+        printf("B - Muy Bueno\n");
+    } else if (nota &gt;= 11) {
+        printf("C - Bueno\n");
+    } else if (nota &gt;= 8) {
+        printf("D - Regular\n");
+    } else {
+        printf("F - Desaprobado\n");
+    }
+    
+    return 0;
+}</code></pre>
+                </div>
+
+                <div class="output-container">
+                    <div class="output-header">
+                        <span class="output-title">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <rect x="2" y="3" width="12" height="10" rx="1" stroke="currentColor" stroke-width="1.5"/>
+                                <path d="M5 1V3M11 1V3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                            </svg>
+                            Salida
+                        </span>
+                    </div>
+                    <pre class="output-content">Ingrese la nota (0-20): 16
+B - Muy Bueno</pre>
+                </div>
+            </section>
+
+            <!-- EJERCICIO 3 -->
+            <section class="exercise">
+                <div class="exercise-header">
+                    <h2 class="exercise-title">
+                        <span class="exercise-number">Ejercicio 3:</span>
+                        Invertir un Número
+                    </h2>
+                    <span class="exercise-tag">Intermedio</span>
+                </div>
+
+                <div class="exercise-description">
+                    <p>Programa que invierte los dígitos de un número entero usando aritmética modular y división.</p>
+                </div>
+
+                <div class="code-container">
+                    <div class="code-header">
+                        <span class="code-title">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <path d="M14 2H2C1.44772 2 1 2.44772 1 3V13C1 13.5523 1.44772 14 2 14H14C14.5523 14 15 13.5523 15 13V3C15 2.44772 14.5523 2 14 2Z" stroke="currentColor" stroke-width="1.5"/>
+                                <path d="M5 6L7 8L5 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M9 10H11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                            </svg>
+                            ejercicio3.c
+                        </span>
+                        <button class="copy-btn" onclick="copyCode(this)">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                                <rect x="9" y="9" width="13" height="13" rx="2" stroke="currentColor" stroke-width="2"/>
+                                <path d="M5 15H4C2.89543 15 2 14.1046 2 13V4C2 2.89543 2.89543 2 4 2H13C14.1046 2 15 2.89543 15 4V5" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                            Copiar
+                        </button>
+                    </div>
+                    <pre><code class="language-cpp">#include &lt;stdio.h&gt;
+int main() {
+    int n, original;
+    int inverso = 0;
+    
+    printf("Ingrese numero: ");
+    scanf("%d", &amp;n);
+    original = n;
+    
+    while (n &gt; 0) {
+        int digito = n % 10;
+        inverso = inverso * 10 + digito;
+        n = n / 10;
+    }
+    
+    printf("Original: %d\n", original);
+    printf("Inverso: %d\n", inverso);
+    
+    return 0;
+}</code></pre>
+                </div>
+
+                <div class="output-container">
+                    <div class="output-header">
+                        <span class="output-title">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <rect x="2" y="3" width="12" height="10" rx="1" stroke="currentColor" stroke-width="1.5"/>
+                                <path d="M5 1V3M11 1V3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                            </svg>
+                            Salida
+                        </span>
+                    </div>
+                    <pre class="output-content">Ingrese numero: 12345
+Original: 12345
+Inverso: 54321</pre>
+                </div>
+            </section>
+
+            <!-- EJERCICIO 4 -->
+            <section class="exercise">
+                <div class="exercise-header">
+                    <h2 class="exercise-title">
+                        <span class="exercise-number">Ejercicio 4:</span>
+                        Calculadora con Menú
+                    </h2>
+                    <span class="exercise-tag">Intermedio</span>
+                </div>
+
+                <div class="exercise-description">
+                    <p>Calculadora interactiva con menú de opciones que utiliza estructuras switch-case y do-while para operaciones básicas.</p>
+                </div>
+
+                <div class="code-container">
+                    <div class="code-header">
+                        <span class="code-title">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <path d="M14 2H2C1.44772 2 1 2.44772 1 3V13C1 13.5523 1.44772 14 2 14H14C14.5523 14 15 13.5523 15 13V3C15 2.44772 14.5523 2 14 2Z" stroke="currentColor" stroke-width="1.5"/>
+                                <path d="M5 6L7 8L5 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M9 10H11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                            </svg>
+                            ejercicio4.c
+                        </span>
+                        <button class="copy-btn" onclick="copyCode(this)">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                                <rect x="9" y="9" width="13" height="13" rx="2" stroke="currentColor" stroke-width="2"/>
+                                <path d="M5 15H4C2.89543 15 2 14.1046 2 13V4C2 2.89543 2.89543 2 4 2H13C14.1046 2 15 2.89543 15 4V5" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                            Copiar
+                        </button>
+                    </div>
+                    <pre><code class="language-cpp">#include &lt;stdio.h&gt;
+int main() {
+    int opcion;
+    float a, b, resultado;
+    
+    do {
+        printf("\n====== CALCULADORA ======\n");
+        printf("1. Suma\n");
+        printf("2. Resta\n");
+        printf("3. Multiplicacion\n");
+        printf("4. Division\n");
+        printf("0. Salir\n");
+        printf("Opcion: ");
+        scanf("%d", &amp;opcion);
+        
+        if (opcion &gt;= 1 &amp;&amp; opcion &lt;= 4) {
+            printf("Numero 1: ");
+            scanf("%f", &amp;a);
+            printf("Numero 2: ");
+            scanf("%f", &amp;b);
+        }
+        
+        switch (opcion) {
+            case 1:
+                printf("Resultado: %.2f\n", a + b);
+                break;
+            case 2:
+                printf("Resultado: %.2f\n", a - b);
+                break;
+            case 3:
+                printf("Resultado: %.2f\n", a * b);
+                break;
+            case 4:
+                if (b == 0)
+                    printf("Error: Division por cero!\n");
+                else
+                    printf("Resultado: %.2f\n", a / b);
+                break;
+            case 0:
+                printf("Saliendo...\n");
+                break;
+            default:
+                printf("Opcion no valida!\n");
+        }
+    } while (opcion != 0);
+    
+    return 0;
+}</code></pre>
+                </div>
+
+                <div class="output-container">
+                    <div class="output-header">
+                        <span class="output-title">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <rect x="2" y="3" width="12" height="10" rx="1" stroke="currentColor" stroke-width="1.5"/>
+                                <path d="M5 1V3M11 1V3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                            </svg>
+                            Salida
+                        </span>
+                    </div>
+                    <pre class="output-content">====== CALCULADORA ======
+1. Suma
+2. Resta
+3. Multiplicacion
+4. Division
+0. Salir
+Opcion: 1
+Numero 1: 15
+Numero 2: 7
+Resultado: 22.00</pre>
+                </div>
+            </section>
+
+            <!-- EJERCICIO 5 -->
+            <section class="exercise">
+                <div class="exercise-header">
+                    <h2 class="exercise-title">
+                        <span class="exercise-number">Ejercicio 5:</span>
+                        Patrones con Asteriscos
+                    </h2>
+                    <span class="exercise-tag">Intermedio</span>
+                </div>
+
+                <div class="exercise-description">
+                    <p>Programa que genera tres patrones diferentes: triángulo ascendente, descendente y pirámide usando bucles anidados.</p>
+                </div>
+
+                <div class="code-container">
+                    <div class="code-header">
+                        <span class="code-title">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <path d="M14 2H2C1.44772 2 1 2.44772 1 3V13C1 13.5523 1.44772 14 2 14H14C14.5523 14 15 13.5523 15 13V3C15 2.44772 14.5523 2 14 2Z" stroke="currentColor" stroke-width="1.5"/>
+                                <path d="M5 6L7 8L5 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M9 10H11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                            </svg>
+                            ejercicio5.c
+                        </span>
+                        <button class="copy-btn" onclick="copyCode(this)">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                                <rect x="9" y="9" width="13" height="13" rx="2" stroke="currentColor" stroke-width="2"/>
+                                <path d="M5 15H4C2.89543 15 2 14.1046 2 13V4C2 2.89543 2.89543 2 4 2H13C14.1046 2 15 2.89543 15 4V5" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                            Copiar
+                        </button>
+                    </div>
+                    <pre><code class="language-cpp">#include &lt;stdio.h&gt;
+void patronA(int n) {
+    printf("\n=== Patron A: Triangulo Ascendente ===\n");
+    for (int i = 1; i &lt;= n; i++) {
+        for (int j = 1; j &lt;= i; j++) {
+            printf("*");
+        }
+        printf("\n");
+    }
+}
+void patronB(int n) {
+    printf("\n=== Patron B: Triangulo Descendente ===\n");
+    for (int i = n; i &gt;= 1; i--) {
+        for (int j = 1; j &lt;= i; j++) {
+            printf("*");
+        }
+        printf("\n");
+    }
+}
+void patronC(int n) {
+    printf("\n=== Patron C: Piramide ===\n");
+    for (int i = 1; i &lt;= n; i++) {
+        // Espacios
+        for (int e = 1; e &lt;= n - i; e++) {
+            printf(" ");
+        }
+        // Asteriscos
+        for (int a = 1; a &lt;= 2*i - 1; a++) {
+            printf("*");
+        }
+        printf("\n");
+    }
+}
+int main() {
+    int n;
+    
+    printf("Ingrese N: ");
+    scanf("%d", &amp;n);
+    
+    patronA(n);
+    patronB(n);
+    patronC(n);
+    
+    return 0;
+}</code></pre>
+                </div>
+
+                <div class="output-container">
+                    <div class="output-header">
+                        <span class="output-title">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <rect x="2" y="3" width="12" height="10" rx="1" stroke="currentColor" stroke-width="1.5"/>
+                                <path d="M5 1V3M11 1V3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                            </svg>
+                            Salida
+                        </span>
+                    </div>
+                    <pre class="output-content">Ingrese N: 5
+
+=== Patron A: Triangulo Ascendente ===
+*
+**
+***
+****
+*****
+
+=== Patron B: Triangulo Descendente ===
+*****
+****
+***
+**
+*
+
+=== Patron C: Piramide ===
+    *
+   ***
+  *****
+ *******
+*********</pre>
+                </div>
+            </section>
+
+            <!-- EJERCICIO 6 -->
+            <section class="exercise">
+                <div class="exercise-header">
+                    <h2 class="exercise-title">
+                        <span class="exercise-number">Ejercicio 6:</span>
+                        Números Perfectos
+                    </h2>
+                    <span class="exercise-tag">Avanzado</span>
+                </div>
+
+                <div class="exercise-description">
+                    <p>Verifica si un número es perfecto calculando la suma de sus divisores propios (un número es perfecto si la suma de sus divisores es igual al número).</p>
+                </div>
+
+                <div class="code-container">
+                    <div class="code-header">
+                        <span class="code-title">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <path d="M14 2H2C1.44772 2 1 2.44772 1 3V13C1 13.5523 1.44772 14 2 14H14C14.5523 14 15 13.5523 15 13V3C15 2.44772 14.5523 2 14 2Z" stroke="currentColor" stroke-width="1.5"/>
+                                <path d="M5 6L7 8L5 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M9 10H11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                            </svg>
+                            ejercicio6.c
+                        </span>
+                        <button class="copy-btn" onclick="copyCode(this)">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                                <rect x="9" y="9" width="13" height="13" rx="2" stroke="currentColor" stroke-width="2"/>
+                                <path d="M5 15H4C2.89543 15 2 14.1046 2 13V4C2 2.89543 2.89543 2 4 2H13C14.1046 2 15 2.89543 15 4V5" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                            Copiar
+                        </button>
+                    </div>
+                    <pre><code class="language-cpp">#include &lt;stdio.h&gt;
+int main() {
+    int n, suma = 0;
+    
+    printf("Ingrese un numero: ");
+    scanf("%d", &amp;n);
+    
+    if (n &lt;= 1) {
+        printf("Error: El numero debe ser mayor que 1\n");
+        return 1;
+    }
+    
+    printf("Divisores de %d: ", n);
+    
+    for (int i = 1; i &lt; n; i++) {
+        if (n % i == 0) {
+            printf("%d ", i);
+            suma += i;
+        }
+    }
+    
+    printf("\nSuma de divisores: %d\n", suma);
+    
+    if (suma == n) {
+        printf("%d ES un numero PERFECTO\n", n);
+    } else {
+        printf("%d NO es un numero perfecto\n", n);
+    }
+    
+    return 0;
+}</code></pre>
+                </div>
+
+                <div class="output-container">
+                    <div class="output-header">
+                        <span class="output-title">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <rect x="2" y="3" width="12" height="10" rx="1" stroke="currentColor" stroke-width="1.5"/>
+                                <path d="M5 1V3M11 1V3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                            </svg>
+                            Salida
+                        </span>
+                    </div>
+                    <pre class="output-content">Ingrese un numero: 6
+Divisores de 6: 1 2 3 
+Suma de divisores: 6
+6 ES un numero PERFECTO</pre>
+                </div>
+            </section>
+
+            <!-- EJERCICIO 7 -->
+            <section class="exercise">
+                <div class="exercise-header">
+                    <h2 class="exercise-title">
+                        <span class="exercise-number">Ejercicio 7:</span>
+                        Serie de Fibonacci
+                    </h2>
+                    <span class="exercise-tag">Avanzado</span>
+                </div>
+
+                <div class="exercise-description">
+                    <p>Genera los primeros N términos de la serie de Fibonacci donde cada número es la suma de los dos anteriores.</p>
+                </div>
+
+                <div class="code-container">
+                    <div class="code-header">
+                        <span class="code-title">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <path d="M14 2H2C1.44772 2 1 2.44772 1 3V13C1 13.5523 1.44772 14 2 14H14C14.5523 14 15 13.5523 15 13V3C15 2.44772 14.5523 2 14 2Z" stroke="currentColor" stroke-width="1.5"/>
+                                <path d="M5 6L7 8L5 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M9 10H11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                            </svg>
+                            ejercicio7.c
+                        </span>
+                        <button class="copy-btn" onclick="copyCode(this)">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                                <rect x="9" y="9" width="13" height="13" rx="2" stroke="currentColor" stroke-width="2"/>
+                                <path d="M5 15H4C2.89543 15 2 14.1046 2 13V4C2 2.89543 2.89543 2 4 2H13C14.1046 2 15 2.89543 15 4V5" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                            Copiar
+                        </button>
+                    </div>
+                    <pre><code class="language-cpp">#include &lt;stdio.h&gt;
+int main() {
+    int n;
+    int a = 0, b = 1, siguiente;
+    
+    printf("Ingrese N (cantidad de terminos): ");
+    scanf("%d", &amp;n);
+    
+    if (n &lt;= 0) {
+        printf("Error: N debe ser mayor que 0\n");
+        return 1;
+    }
+    
+    printf("Serie de Fibonacci (%d terminos):\n", n);
+    
+    if (n &gt;= 1) {
+        printf("%d ", a);
+    }
+    
+    if (n &gt;= 2) {
+        printf("%d ", b);
+    }
+    
+    for (int i = 3; i &lt;= n; i++) {
+        siguiente = a + b;
+        printf("%d ", siguiente);
+        a = b;
+        b = siguiente;
+    }
+    
+    printf("\n");
+    
+    return 0;
+}</code></pre>
+                </div>
+
+                <div class="output-container">
+                    <div class="output-header">
+                        <span class="output-title">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <rect x="2" y="3" width="12" height="10" rx="1" stroke="currentColor" stroke-width="1.5"/>
+                                <path d="M5 1V3M11 1V3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                            </svg>
+                            Salida
+                        </span>
+                    </div>
+                    <pre class="output-content">Ingrese N (cantidad de terminos): 10
+Serie de Fibonacci (10 terminos):
+0 1 1 2 3 5 8 13 21 34</pre>
+                </div>
+            </section>
+
+            <!-- EJERCICIO 8 -->
+            <section class="exercise">
+                <div class="exercise-header">
+                    <h2 class="exercise-title">
+                        <span class="exercise-number">Ejercicio 8:</span>
+                        Validador de Contraseñas
+                    </h2>
+                    <span class="exercise-tag">Avanzado</span>
+                </div>
+
+                <div class="exercise-description">
+                    <p>Valida la fortaleza de una contraseña verificando criterios: longitud mínima, mayúsculas, minúsculas, dígitos y caracteres especiales.</p>
+                </div>
+
+                <div class="code-container">
+                    <div class="code-header">
+                        <span class="code-title">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <path d="M14 2H2C1.44772 2 1 2.44772 1 3V13C1 13.5523 1.44772 14 2 14H14C14.5523 14 15 13.5523 15 13V3C15 2.44772 14.5523 2 14 2Z" stroke="currentColor" stroke-width="1.5"/>
+                                <path d="M5 6L7 8L5 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M9 10H11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                            </svg>
+                            ejercicio8.c
+                        </span>
+                        <button class="copy-btn" onclick="copyCode(this)">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                                <rect x="9" y="9" width="13" height="13" rx="2" stroke="currentColor" stroke-width="2"/>
+                                <path d="M5 15H4C2.89543 15 2 14.1046 2 13V4C2 2.89543 2.89543 2 4 2H13C14.1046 2 15 2.89543 15 4V5" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                            Copiar
+                        </button>
+                    </div>
+                    <pre><code class="language-cpp">#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+int main() {
+    char password[100];
+    int longitud, tieneMayuscula = 0, tieneMinuscula = 0;
+    int tieneDigito = 0, tieneEspecial = 0;
+    
+    printf("Ingrese una contrasena: ");
+    scanf("%s", password);
+    
+    longitud = strlen(password);
+    
+    // Verificar cada caracter
+    for (int i = 0; i &lt; longitud; i++) {
+        char c = password[i];
+        
+        if (c &gt;= 'A' &amp;&amp; c &lt;= 'Z') {
+            tieneMayuscula = 1;
+        } else if (c &gt;= 'a' &amp;&amp; c &lt;= 'z') {
+            tieneMinuscula = 1;
+        } else if (c &gt;= '0' &amp;&amp; c &lt;= '9') {
+            tieneDigito = 1;
+        } else if (c == '!' || c == '@' || c == '#' || c == '$' || c == '%') {
+            tieneEspecial = 1;
+        }
+    }
+    
+    printf("\n=== Verificacion de Criterios ===\n");
+    printf("Longitud minima (8): %s\n", longitud &gt;= 8 ? "OK" : "FALTA");
+    printf("Letra mayuscula: %s\n", tieneMayuscula ? "OK" : "FALTA");
+    printf("Letra minuscula: %s\n", tieneMinuscula ? "OK" : "FALTA");
+    printf("Digito: %s\n", tieneDigito ? "OK" : "FALTA");
+    printf("Caracter especial (!@#$%%): %s\n", tieneEspecial ? "OK" : "FALTA");
+    
+    if (longitud &gt;= 8 &amp;&amp; tieneMayuscula &amp;&amp; tieneMinuscula &amp;&amp; tieneDigito &amp;&amp; tieneEspecial) {
+        printf("\nContrasena VALIDA\n");
+    } else {
+        printf("\nContrasena INVALIDA\n");
+    }
+    
+    return 0;
+}</code></pre>
+                </div>
+
+                <div class="output-container">
+                    <div class="output-header">
+                        <span class="output-title">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <rect x="2" y="3" width="12" height="10" rx="1" stroke="currentColor" stroke-width="1.5"/>
+                                <path d="M5 1V3M11 1V3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                            </svg>
+                            Salida
+                        </span>
+                    </div>
+                    <pre class="output-content">Ingrese una contrasena: MyPass123!
+
+=== Verificacion de Criterios ===
+Longitud minima (8): OK
+Letra mayuscula: OK
+Letra minuscula: OK
+Digito: OK
+Caracter especial (!@#$%): OK
+
+Contrasena VALIDA</pre>
+                </div>
+            </section>
+
+            <!-- EJERCICIO 9 -->
+            <section class="exercise">
+                <div class="exercise-header">
+                    <h2 class="exercise-title">
+                        <span class="exercise-number">Ejercicio 9:</span>
+                        Conversión de Sistemas Numéricos
+                    </h2>
+                    <span class="exercise-tag">Avanzado</span>
+                </div>
+
+                <div class="exercise-description">
+                    <p>Convierte un número decimal a sus representaciones en sistemas binario y octal usando funciones modulares.</p>
+                </div>
+
+                <div class="code-container">
+                    <div class="code-header">
+                        <span class="code-title">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <path d="M14 2H2C1.44772 2 1 2.44772 1 3V13C1 13.5523 1.44772 14 2 14H14C14.5523 14 15 13.5523 15 13V3C15 2.44772 14.5523 2 14 2Z" stroke="currentColor" stroke-width="1.5"/>
+                                <path d="M5 6L7 8L5 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M9 10H11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                            </svg>
+                            ejercicio9.c
+                        </span>
+                        <button class="copy-btn" onclick="copyCode(this)">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                                <rect x="9" y="9" width="13" height="13" rx="2" stroke="currentColor" stroke-width="2"/>
+                                <path d="M5 15H4C2.89543 15 2 14.1046 2 13V4C2 2.89543 2.89543 2 4 2H13C14.1046 2 15 2.89543 15 4V5" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                            Copiar
+                        </button>
+                    </div>
+                    <pre><code class="language-cpp">#include &lt;stdio.h&gt;
+void decimalABinario(int n) {
+    int binario[32];
+    int i = 0;
+    
+    if (n == 0) {
+        printf("0\n");
+        return;
+    }
+    
+    while (n &gt; 0) {
+        binario[i] = n % 2;
+        n = n / 2;
+        i++;
+    }
+    
+    printf("Binario: ");
+    for (int j = i - 1; j &gt;= 0; j--) {
+        printf("%d", binario[j]);
+    }
+    printf("\n");
+}
+void decimalAOctal(int n) {
+    int octal[32];
+    int i = 0;
+    
+    if (n == 0) {
+        printf("0\n");
+        return;
+    }
+    
+    while (n &gt; 0) {
+        octal[i] = n % 8;
+        n = n / 8;
+        i++;
+    }
+    
+    printf("Octal: ");
+    for (int j = i - 1; j &gt;= 0; j--) {
+        printf("%d", octal[j]);
+    }
+    printf("\n");
+}
+int main() {
+    int numero;
+    
+    printf("Ingrese un numero decimal: ");
+    scanf("%d", &amp;numero);
+    
+    printf("\nConversiones del numero %d:\n", numero);
+    decimalABinario(numero);
+    decimalAOctal(numero);
+    
+    return 0;
+}</code></pre>
+                </div>
+
+                <div class="output-container">
+                    <div class="output-header">
+                        <span class="output-title">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <rect x="2" y="3" width="12" height="10" rx="1" stroke="currentColor" stroke-width="1.5"/>
+                                <path d="M5 1V3M11 1V3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                            </svg>
+                            Salida
+                        </span>
+                    </div>
+                    <pre class="output-content">Ingrese un numero decimal: 42
+
+Conversiones del numero 42:
+Binario: 101010
+Octal: 52</pre>
+                </div>
+            </section>
+
+            <!-- EJERCICIO 10 -->
+            <section class="exercise">
+                <div class="exercise-header">
+                    <h2 class="exercise-title">
+                        <span class="exercise-number">Ejercicio 10:</span>
+                        Juego de Adivinanza
+                    </h2>
+                    <span class="exercise-tag">Desafío</span>
+                </div>
+
+                <div class="exercise-description">
+                    <p>Juego interactivo donde el usuario debe adivinar un número aleatorio entre 1 y 100 en un máximo de 10 intentos con pistas.</p>
+                </div>
+
+                <div class="code-container">
+                    <div class="code-header">
+                        <span class="code-title">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <path d="M14 2H2C1.44772 2 1 2.44772 1 3V13C1 13.5523 1.44772 14 2 14H14C14.5523 14 15 13.5523 15 13V3C15 2.44772 14.5523 2 14 2Z" stroke="currentColor" stroke-width="1.5"/>
+                                <path d="M5 6L7 8L5 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M9 10H11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                            </svg>
+                            ejercicio10.c
+                        </span>
+                        <button class="copy-btn" onclick="copyCode(this)">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                                <rect x="9" y="9" width="13" height="13" rx="2" stroke="currentColor" stroke-width="2"/>
+                                <path d="M5 15H4C2.89543 15 2 14.1046 2 13V4C2 2.89543 2.89543 2 4 2H13C14.1046 2 15 2.89543 15 4V5" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                            Copiar
+                        </button>
+                    </div>
+                    <pre><code class="language-cpp">#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;time.h&gt;
+int main() {
+    int numeroSecreto, intento, numIntentos = 0;
+    int maxIntentos = 10;
+    
+    // Inicializar generador de numeros aleatorios
+    srand(time(0));
+    numeroSecreto = rand() % 100 + 1; // Numero entre 1 y 100
+    
+    printf("====== JUEGO DE ADIVINANZA ======\n");
+    printf("Adivina el numero (1-100)!\n");
+    printf("Tienes %d intentos.\n\n", maxIntentos);
+    
+    do {
+        numIntentos++;
+        printf("Intento %d: ", numIntentos);
+        scanf("%d", &amp;intento);
+        
+        if (intento &lt; 1 || intento &gt; 100) {
+            printf("Por favor, ingresa un numero entre 1 y 100\n");
+            numIntentos--;
+            continue;
+        }
+        
+        if (intento &lt; numeroSecreto) {
+            printf("El numero es MAYOR\n");
+        } else if (intento &gt; numeroSecreto) {
+            printf("El numero es MENOR\n");
+        } else {
+            printf("\n*** FELICIDADES! ***\n");
+            printf("Adivinaste el numero en %d intentos!\n", numIntentos);
+            return 0;
+        }
+        
+        if (numIntentos &gt;= maxIntentos) {
+            printf("\nLo siento, alcanzaste el limite de intentos.\n");
+            printf("El numero era: %d\n", numeroSecreto);
+            return 0;
+        }
+        
+    } while (intento != numeroSecreto);
+    
+    return 0;
+}</code></pre>
+                </div>
+
+                <div class="output-container">
+                    <div class="output-header">
+                        <span class="output-title">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <rect x="2" y="3" width="12" height="10" rx="1" stroke="currentColor" stroke-width="1.5"/>
+                                <path d="M5 1V3M11 1V3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                            </svg>
+                            Salida
+                        </span>
+                    </div>
+                    <pre class="output-content">====== JUEGO DE ADIVINANZA ======
+Adivina el numero (1-100)!
+Tienes 10 intentos.
+
+Intento 1: 50
+El numero es MAYOR
+Intento 2: 75
+El numero es MENOR
+Intento 3: 65
+El numero es MAYOR
+Intento 4: 70
+El numero es MENOR
+Intento 5: 68
+
+*** FELICIDADES! ***
+Adivinaste el numero en 5 intentos!</pre>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-text">
+                <span class="comment">// Semana 2 - Estructuras de Control</span><br>
+                <span class="comment">// Curso de Nivelación 2026</span>
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        hljs.highlightAll();
+        function copyCode(button) {
+            const codeBlock = button.closest('.code-container').querySelector('code');
+            const code = codeBlock.textContent;
+            navigator.clipboard.writeText(code).then(() => {
+                const originalText = button.innerHTML;
+                button.innerHTML = `<svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17L4 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Copiado!`;
+                button.classList.add('copied');
+                setTimeout(() => {
+                    button.innerHTML = originalText;
+                    button.classList.remove('copied');
+                }, 2000);
+            });
+        }
+    </script>
+</body>
+</html>

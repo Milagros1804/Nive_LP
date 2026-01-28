@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semana 2 - Estructuras de Control</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="week-styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Highlight.js para resaltado de código -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/cpp.min.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="index.html" style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 0.5rem;">
+                    <span class="bracket">&lt;</span>
+                    <span class="logo-text">Nivelación C++</span>
+                    <span class="bracket">/&gt;</span>
+                </a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">← Volver</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="week-content">
+        <div class="container">
+            <div class="week-header-section">
+                <div class="week-badge">Semana 02</div>
+                <h1 class="week-main-title">Estructuras de Control</h1>
+                <p class="week-intro">10 ejercicios prácticos del lunes - Condicionales y bucles</p>
+            </div>
+
+            <!-- ========================================
+                 EJERCICIO 1
+                 ======================================== -->
+            <section class="exercise">
+                <div class="exercise-header">
+                    <h2 class="exercise-title">
+                        <span class="exercise-number">Ejercicio 1:</span>
+                        [NOMBRE DEL EJERCICIO]
+                    </h2>
+                    <span class="exercise-tag">Básico</span>
+                </div>
+
+                <div class="exercise-description">
+                    <p>[DESCRIPCIÓN DEL EJERCICIO]</p>
+                </div>
+
+                <div class="code-container">
+                    <div class="code-header">
+                        <span class="code-title">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <path d="M14 2H2C1.44772 2 1 2.44772 1 3V13C1 13.5523 1.44772 14 2 14H14C14.5523 14 15 13.5523 15 13V3C15 2.44772 14.5523 2 14 2Z" stroke="currentColor" stroke-width="1.5"/>
+                                <path d="M5 6L7 8L5 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M9 10H11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                            </svg>
+                            ejercicio1.cpp
+                        </span>
+                        <button class="copy-btn" onclick="copyCode(this)">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                                <rect x="9" y="9" width="13" height="13" rx="2" stroke="currentColor" stroke-width="2"/>
+                                <path d="M5 15H4C2.89543 15 2 14.1046 2 13V4C2 2.89543 2.89543 2 4 2H13C14.1046 2 15 2.89543 15 4V5" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                            Copiar
+                        </button>
+                    </div>
+                    <pre><code class="language-cpp">// PEGA AQUÍ TU CÓDIGO
+#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    // Tu código aquí
+    
+    return 0;
+}</code></pre>
+                </div>
+
+                <div class="output-container">
+                    <div class="output-header">
+                        <span class="output-title">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <rect x="2" y="3" width="12" height="10" rx="1" stroke="currentColor" stroke-width="1.5"/>
+                                <path d="M5 1V3M11 1V3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                            </svg>
+                            Salida
+                        </span>
+                    </div>
+                    <pre class="output-content">// PEGA AQUÍ LA SALIDA DE TU PROGRAMA</pre>
+                </div>
+            </section>
+
+            <!-- ========================================
+                 EJERCICIO 2
+                 ======================================== -->
+            <section class="exercise">
+                <div class="exercise-header">
+                    <h2 class="exercise-title">
+                        <span class="exercise-number">Ejercicio 2:</span>
+                        [NOMBRE DEL EJERCICIO]
+                    </h2>
+                    <span class="exercise-tag">Básico</span>
+                </div>
+
+                <div class="exercise-description">
+                    <p>[DESCRIPCIÓN DEL EJERCICIO]</p>
+                </div>
+
+                <div class="code-container">
+                    <div class="code-header">
+                        <span class="code-title">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <path d="M14 2H2C1.44772 2 1 2.44772 1 3V13C1 13.5523 1.44772 14 2 14H14C14.5523 14 15 13.5523 15 13V3C15 2.44772 14.5523 2 14 2Z" stroke="currentColor" stroke-width="1.5"/>
+                                <path d="M5 6L7 8L5 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M9 10H11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                            </svg>
+                            ejercicio2.cpp
+                        </span>
+                        <button class="copy-btn" onclick="copyCode(this)">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                                <rect x="9" y="9" width="13" height="13" rx="2" stroke="currentColor" stroke-width="2"/>
+                                <path d="M5 15H4C2.89543 15 2 14.1046 2 13V4C2 2.89543 2.89543 2 4 2H13C14.1046 2 15 2.89543 15 4V5" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                            Copiar
+                        </button>
+                    </div>
+                    <pre><code class="language-cpp">// PEGA AQUÍ TU CÓDIGO</code></pre>
+                </div>
+
+                <div class="output-container">
+                    <div class="output-header">
+                        <span class="output-title">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <rect x="2" y="3" width="12" height="10" rx="1" stroke="currentColor" stroke-width="1.5"/>
+                                <path d="M5 1V3M11 1V3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                            </svg>
+                            Salida
+                        </span>
+                    </div>
+                    <pre class="output-content">// PEGA AQUÍ LA SALIDA</pre>
+                </div>
+            </section>
+
+            <!-- ========================================
+                 EJERCICIO 3
+                 ======================================== -->
+            <section class="exercise">
+                <div class="exercise-header">
+                    <h2 class="exercise-title">
+                        <span class="exercise-number">Ejercicio 3:</span>
+                        [NOMBRE DEL EJERCICIO]
+                    </h2>
+                    <span class="exercise-tag">Intermedio</span>
+                </div>
+
+                <div class="exercise-description">
+                    <p>[DESCRIPCIÓN DEL EJERCICIO]</p>
+                </div>
+
+                <div class="code-container">
+                    <div class="code-header">
+                        <span class="code-title">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <path d="M14 2H2C1.44772 2 1 2.44772 1 3V13C1 13.5523 1.44772 14 2 14H14C14.5523 14 15 13.5523 15 13V3C15 2.44772 14.5523 2 14 2Z" stroke="currentColor" stroke-width="1.5"/>
+                                <path d="M5 6L7 8L5 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M9 10H11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                            </svg>
+                            ejercicio3.cpp
+                        </span>
+                        <button class="copy-btn" onclick="copyCode(this)">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                                <rect x="9" y="9" width="13" height="13" rx="2" stroke="currentColor" stroke-width="2"/>
+                                <path d="M5 15H4C2.89543 15 2 14.1046 2 13V4C2 2.89543 2.89543 2 4 2H13C14.1046 2 15 2.89543 15 4V5" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                            Copiar
+                        </button>
+                    </div>
+                    <pre><code class="language-cpp">// PEGA AQUÍ TU CÓDIGO</code></pre>
+                </div>
+
+                <div class="output-container">
+                    <div class="output-header">
+                        <span class="output-title">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <rect x="2" y="3" width="12" height="10" rx="1" stroke="currentColor" stroke-width="1.5"/>
+                                <path d="M5 1V3M11 1V3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                            </svg>
+                            Salida
+                        </span>
+                    </div>
+                    <pre class="output-content">// PEGA AQUÍ LA SALIDA</pre>
+                </div>
+            </section>
+
+            <!-- ========================================
+                 EJERCICIO 4
+                 ======================================== -->
+            <section class="exercise">
+                <div class="exercise-header">
+                    <h2 class="exercise-title">
+                        <span class="exercise-number">Ejercicio 4:</span>
+                        [NOMBRE DEL EJERCICIO]
+                    </h2>
+                    <span class="exercise-tag">Intermedio</span>
+                </div>
+
+                <div class="exercise-description">
+                    <p>[DESCRIPCIÓN DEL EJERCICIO]</p>
+                </div>
+
+                <div class="code-container">
+                    <div class="code-header">
+                        <span class="code-title">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <path d="M14 2H2C1.44772 2 1 2.44772 1 3V13C1 13.5523 1.44772 14 2 14H14C14.5523 14 15 13.5523 15 13V3C15 2.44772 14.5523 2 14 2Z" stroke="currentColor" stroke-width="1.5"/>
+                                <path d="M5 6L7 8L5 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M9 10H11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                            </svg>
+                            ejercicio4.cpp
+                        </span>
+                        <button class="copy-btn" onclick="copyCode(this)">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                                <rect x="9" y="9" width="13" height="13" rx="2" stroke="currentColor" stroke-width="2"/>
+                                <path d="M5 15H4C2.89543 15 2 14.1046 2 13V4C2 2.89543 2.89543 2 4 2H13C14.1046 2 15 2.89543 15 4V5" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                            Copiar
+                        </button>
+                    </div>
+                    <pre><code class="language-cpp">// PEGA AQUÍ TU CÓDIGO</code></pre>
+                </div>
+
+                <div class="output-container">
+                    <div class="output-header">
+                        <span class="output-title">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <rect x="2" y="3" width="12" height="10" rx="1" stroke="currentColor" stroke-width="1.5"/>
+                                <path d="M5 1V3M11 1V3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                            </svg>
+                            Salida
+                        </span>
+                    </div>
+                    <pre class="output-content">// PEGA AQUÍ LA SALIDA</pre>
+                </div>
+            </section>
+
+            <!-- ========================================
+                 EJERCICIO 5
+                 ======================================== -->
+            <section class="exercise">
+                <div class="exercise-header">
+                    <h2 class="exercise-title">
+                        <span class="exercise-number">Ejercicio 5:</span>
+                        [NOMBRE DEL EJERCICIO]
+                    </h2>
+                    <span class="exercise-tag">Intermedio</span>
+                </div>
+
+                <div class="exercise-description">
+                    <p>[DESCRIPCIÓN DEL EJERCICIO]</p>
+                </div>
+
+                <div class="code-container">
+                    <div class="code-header">
+                        <span class="code-title">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <path d="M14 2H2C1.44772 2 1 2.44772 1 3V13C1 13.5523 1.44772 14 2 14H14C14.5523 14 15 13.5523 15 13V3C15 2.44772 14.5523 2 14 2Z" stroke="currentColor" stroke-width="1.5"/>
+                                <path d="M5 6L7 8L5 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M9 10H11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                            </svg>
+                            ejercicio5.cpp
+                        </span>
+                        <button class="copy-btn" onclick="copyCode(this)">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                                <rect x="9" y="9" width="13" height="13" rx="2" stroke="currentColor" stroke-width="2"/>
+                                <path d="M5 15H4C2.89543 15 2 14.1046 2 13V4C2 2.89543 2.89543 2 4 2H13C14.1046 2 15 2.89543 15 4V5" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                            Copiar
+                        </button>
+                    </div>
+                    <pre><code class="language-cpp">// PEGA AQUÍ TU CÓDIGO</code></pre>
+                </div>
+
+                <div class="output-container">
+                    <div class="output-header">
+                        <span class="output-title">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <rect x="2" y="3" width="12" height="10" rx="1" stroke="currentColor" stroke-width="1.5"/>
+                                <path d="M5 1V3M11 1V3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                            </svg>
+                            Salida
+                        </span>
+                    </div>
+                    <pre class="output-content">// PEGA AQUÍ LA SALIDA</pre>
+                </div>
+            </section>
+
+            <!-- ========================================
+                 EJERCICIO 6
+                 ======================================== -->
+            <section class="exercise">
+                <div class="exercise-header">
+                    <h2 class="exercise-title">
+                        <span class="exercise-number">Ejercicio 6:</span>
+                        [NOMBRE DEL EJERCICIO]
+                    </h2>
+                    <span class="exercise-tag">Avanzado</span>
+                </div>
+
+                <div class="exercise-description">
+                    <p>[DESCRIPCIÓN DEL EJERCICIO]</p>
+                </div>
+
+                <div class="code-container">
+                    <div class="code-header">
+                        <span class="code-title">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <path d="M14 2H2C1.44772 2 1 2.44772 1 3V13C1 13.5523 1.44772 14 2 14H14C14.5523 14 15 13.5523 15 13V3C15 2.44772 14.5523 2 14 2Z" stroke="currentColor" stroke-width="1.5"/>
+                                <path d="M5 6L7 8L5 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M9 10H11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                            </svg>
+                            ejercicio6.cpp
+                        </span>
+                        <button class="copy-btn" onclick="copyCode(this)">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                                <rect x="9" y="9" width="13" height="13" rx="2" stroke="currentColor" stroke-width="2"/>
+                                <path d="M5 15H4C2.89543 15 2 14.1046 2 13V4C2 2.89543 2.89543 2 4 2H13C14.1046 2 15 2.89543 15 4V5" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                            Copiar
+                        </button>
+                    </div>
+                    <pre><code class="language-cpp">// PEGA AQUÍ TU CÓDIGO</code></pre>
+                </div>
+
+                <div class="output-container">
+                    <div class="output-header">
+                        <span class="output-title">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <rect x="2" y="3" width="12" height="10" rx="1" stroke="currentColor" stroke-width="1.5"/>
+                                <path d="M5 1V3M11 1V3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                            </svg>
+                            Salida
+                        </span>
+                    </div>
+                    <pre class="output-content">// PEGA AQUÍ LA SALIDA</pre>
+                </div>
+            </section>
+
+            <!-- ========================================
+                 EJERCICIO 7
+                 ======================================== -->
+            <section class="exercise">
+                <div class="exercise-header">
+                    <h2 class="exercise-title">
+                        <span class="exercise-number">Ejercicio 7:</span>
+                        [NOMBRE DEL EJERCICIO]
+                    </h2>
+                    <span class="exercise-tag">Avanzado</span>
+                </div>
+
+                <div class="exercise-description">
+                    <p>[DESCRIPCIÓN DEL EJERCICIO]</p>
+                </div>
+
+                <div class="code-container">
+                    <div class="code-header">
+                        <span class="code-title">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <path d="M14 2H2C1.44772 2 1 2.44772 1 3V13C1 13.5523 1.44772 14 2 14H14C14.5523 14 15 13.5523 15 13V3C15 2.44772 14.5523 2 14 2Z" stroke="currentColor" stroke-width="1.5"/>
+                                <path d="M5 6L7 8L5 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M9 10H11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                            </svg>
+                            ejercicio7.cpp
+                        </span>
+                        <button class="copy-btn" onclick="copyCode(this)">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                                <rect x="9" y="9" width="13" height="13" rx="2" stroke="currentColor" stroke-width="2"/>
+                                <path d="M5 15H4C2.89543 15 2 14.1046 2 13V4C2 2.89543 2.89543 2 4 2H13C14.1046 2 15 2.89543 15 4V5" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                            Copiar
+                        </button>
+                    </div>
+                    <pre><code class="language-cpp">// PEGA AQUÍ TU CÓDIGO</code></pre>
+                </div>
+
+                <div class="output-container">
+                    <div class="output-header">
+                        <span class="output-title">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <rect x="2" y="3" width="12" height="10" rx="1" stroke="currentColor" stroke-width="1.5"/>
+                                <path d="M5 1V3M11 1V3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                            </svg>
+                            Salida
+                        </span>
+                    </div>
+                    <pre class="output-content">// PEGA AQUÍ LA SALIDA</pre>
+                </div>
+            </section>
+
+            <!-- ========================================
+                 EJERCICIO 8
+                 ======================================== -->
+            <section class="exercise">
+                <div class="exercise-header">
+                    <h2 class="exercise-title">
+                        <span class="exercise-number">Ejercicio 8:</span>
+                        [NOMBRE DEL EJERCICIO]
+                    </h2>
+                    <span class="exercise-tag">Avanzado</span>
+                </div>
+
+                <div class="exercise-description">
+                    <p>[DESCRIPCIÓN DEL EJERCICIO]</p>
+                </div>
+
+                <div class="code-container">
+                    <div class="code-header">
+                        <span class="code-title">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <path d="M14 2H2C1.44772 2 1 2.44772 1 3V13C1 13.5523 1.44772 14 2 14H14C14.5523 14 15 13.5523 15 13V3C15 2.44772 14.5523 2 14 2Z" stroke="currentColor" stroke-width="1.5"/>
+                                <path d="M5 6L7 8L5 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M9 10H11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                            </svg>
+                            ejercicio8.cpp
+                        </span>
+                        <button class="copy-btn" onclick="copyCode(this)">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                                <rect x="9" y="9" width="13" height="13" rx="2" stroke="currentColor" stroke-width="2"/>
+                                <path d="M5 15H4C2.89543 15 2 14.1046 2 13V4C2 2.89543 2.89543 2 4 2H13C14.1046 2 15 2.89543 15 4V5" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                            Copiar
+                        </button>
+                    </div>
+                    <pre><code class="language-cpp">// PEGA AQUÍ TU CÓDIGO</code></pre>
+                </div>
+
+                <div class="output-container">
+                    <div class="output-header">
+                        <span class="output-title">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <rect x="2" y="3" width="12" height="10" rx="1" stroke="currentColor" stroke-width="1.5"/>
+                                <path d="M5 1V3M11 1V3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                            </svg>
+                            Salida
+                        </span>
+                    </div>
+                    <pre class="output-content">// PEGA AQUÍ LA SALIDA</pre>
+                </div>
+            </section>
+
+            <!-- ========================================
+                 EJERCICIO 9
+                 ======================================== -->
+            <section class="exercise">
+                <div class="exercise-header">
+                    <h2 class="exercise-title">
+                        <span class="exercise-number">Ejercicio 9:</span>
+                        [NOMBRE DEL EJERCICIO]
+                    </h2>
+                    <span class="exercise-tag">Avanzado</span>
+                </div>
+
+                <div class="exercise-description">
+                    <p>[DESCRIPCIÓN DEL EJERCICIO]</p>
+                </div>
+
+                <div class="code-container">
+                    <div class="code-header">
+                        <span class="code-title">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <path d="M14 2H2C1.44772 2 1 2.44772 1 3V13C1 13.5523 1.44772 14 2 14H14C14.5523 14 15 13.5523 15 13V3C15 2.44772 14.5523 2 14 2Z" stroke="currentColor" stroke-width="1.5"/>
+                                <path d="M5 6L7 8L5 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M9 10H11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                            </svg>
+                            ejercicio9.cpp
+                        </span>
+                        <button class="copy-btn" onclick="copyCode(this)">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                                <rect x="9" y="9" width="13" height="13" rx="2" stroke="currentColor" stroke-width="2"/>
+                                <path d="M5 15H4C2.89543 15 2 14.1046 2 13V4C2 2.89543 2.89543 2 4 2H13C14.1046 2 15 2.89543 15 4V5" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                            Copiar
+                        </button>
+                    </div>
+                    <pre><code class="language-cpp">// PEGA AQUÍ TU CÓDIGO</code></pre>
+                </div>
+
+                <div class="output-container">
+                    <div class="output-header">
+                        <span class="output-title">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <rect x="2" y="3" width="12" height="10" rx="1" stroke="currentColor" stroke-width="1.5"/>
+                                <path d="M5 1V3M11 1V3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                            </svg>
+                            Salida
+                        </span>
+                    </div>
+                    <pre class="output-content">// PEGA AQUÍ LA SALIDA</pre>
+                </div>
+            </section>
+
+            <!-- ========================================
+                 EJERCICIO 10
+                 ======================================== -->
+            <section class="exercise">
+                <div class="exercise-header">
+                    <h2 class="exercise-title">
+                        <span class="exercise-number">Ejercicio 10:</span>
+                        [NOMBRE DEL EJERCICIO]
+                    </h2>
+                    <span class="exercise-tag">Desafío</span>
+                </div>
+
+                <div class="exercise-description">
+                    <p>[DESCRIPCIÓN DEL EJERCICIO]</p>
+                </div>
+
+                <div class="code-container">
+                    <div class="code-header">
+                        <span class="code-title">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <path d="M14 2H2C1.44772 2 1 2.44772 1 3V13C1 13.5523 1.44772 14 2 14H14C14.5523 14 15 13.5523 15 13V3C15 2.44772 14.5523 2 14 2Z" stroke="currentColor" stroke-width="1.5"/>
+                                <path d="M5 6L7 8L5 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M9 10H11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                            </svg>
+                            ejercicio10.cpp
+                        </span>
+                        <button class="copy-btn" onclick="copyCode(this)">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                                <rect x="9" y="9" width="13" height="13" rx="2" stroke="currentColor" stroke-width="2"/>
+                                <path d="M5 15H4C2.89543 15 2 14.1046 2 13V4C2 2.89543 2.89543 2 4 2H13C14.1046 2 15 2.89543 15 4V5" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                            Copiar
+                        </button>
+                    </div>
+                    <pre><code class="language-cpp">// PEGA AQUÍ TU CÓDIGO</code></pre>
+                </div>
+
+                <div class="output-container">
+                    <div class="output-header">
+                        <span class="output-title">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <rect x="2" y="3" width="12" height="10" rx="1" stroke="currentColor" stroke-width="1.5"/>
+                                <path d="M5 1V3M11 1V3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                            </svg>
+                            Salida
+                        </span>
+                    </div>
+                    <pre class="output-content">// PEGA AQUÍ LA SALIDA</pre>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-text">
+                <span class="comment">// Semana 2 - Estructuras de Control</span><br>
+                <span class="comment">// Curso de Nivelación 2026</span>
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Inicializar highlight.js
+        hljs.highlightAll();
+
+        // Función para copiar código
+        function copyCode(button) {
+            const codeBlock = button.closest('.code-container').querySelector('code');
+            const code = codeBlock.textContent;
+            
+            navigator.clipboard.writeText(code).then(() => {
+                const originalText = button.innerHTML;
+                button.innerHTML = `
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                        <path d="M20 6L9 17L4 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    Copiado!
+                `;
+                button.classList.add('copied');
+                
+                setTimeout(() => {
+                    button.innerHTML = originalText;
+                    button.classList.remove('copied');
+                }, 2000);
+            });
+        }
+    </script>
+</body>
+</html>

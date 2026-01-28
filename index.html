@@ -3,10 +3,202 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Sitio de Nivelación</title>
+    <title>Curso de Nivelación - Programación en C/C++</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>Bienvenido a mi sitio</h1>
-    <p>Este es mi proyecto de nivelación</p>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="bracket">&lt;</span>
+                <span class="logo-text">Nivelación C++</span>
+                <span class="bracket">/&gt;</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#inicio" class="nav-link active">Inicio</a></li>
+                <li><a href="#semanas" class="nav-link">Semanas</a></li>
+                <li><a href="#recursos" class="nav-link">Recursos</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="hero" id="inicio">
+        <div class="hero-background">
+            <div class="code-rain"></div>
+        </div>
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <span class="comment">// Curso de Nivelación</span><br>
+                <span class="keyword">Programación en</span> <span class="type">C/C++</span>
+            </h1>
+            <p class="hero-subtitle">7 semanas de ejercicios prácticos y conceptos fundamentales</p>
+            <a href="#semanas" class="btn-primary">
+                <span>Ver ejercicios</span>
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </a>
+        </div>
+    </header>
+
+    <section class="weeks-section" id="semanas">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="keyword">class</span> <span class="type">Semanas</span> {
+            </h2>
+            
+            <div class="weeks-grid">
+                <!-- Semana 1 -->
+                <div class="week-card" data-week="1">
+                    <div class="week-header">
+                        <div class="week-number">01</div>
+                        <h3 class="week-title">Fundamentos de C</h3>
+                    </div>
+                    <p class="week-description">Introducción a la sintaxis básica, variables y tipos de datos</p>
+                    <a href="semana1.html" class="week-link">
+                        Ver ejercicios
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                </div>
+
+                <!-- Semana 2 -->
+                <div class="week-card" data-week="2">
+                    <div class="week-header">
+                        <div class="week-number">02</div>
+                        <h3 class="week-title">Estructuras de Control</h3>
+                    </div>
+                    <p class="week-description">Condicionales, bucles y control de flujo</p>
+                    <a href="semana2.html" class="week-link">
+                        Ver ejercicios
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                </div>
+
+                <!-- Semana 3 -->
+                <div class="week-card" data-week="3">
+                    <div class="week-header">
+                        <div class="week-number">03</div>
+                        <h3 class="week-title">Funciones y Arreglos</h3>
+                    </div>
+                    <p class="week-description">Modularización del código y manejo de arrays</p>
+                    <a href="semana3.html" class="week-link">
+                        Ver ejercicios
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                </div>
+
+                <!-- Semana 4 -->
+                <div class="week-card" data-week="4">
+                    <div class="week-header">
+                        <div class="week-number">04</div>
+                        <h3 class="week-title">Punteros y Memoria</h3>
+                    </div>
+                    <p class="week-description">Gestión de memoria dinámica y punteros</p>
+                    <a href="semana4.html" class="week-link">
+                        Ver ejercicios
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                </div>
+
+                <!-- Semana 5 -->
+                <div class="week-card" data-week="5">
+                    <div class="week-header">
+                        <div class="week-number">05</div>
+                        <h3 class="week-title">Estructuras de Datos</h3>
+                    </div>
+                    <p class="week-description">Structs, uniones y enumeraciones</p>
+                    <a href="semana5.html" class="week-link">
+                        Ver ejercicios
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                </div>
+
+                <!-- Semana 6 -->
+                <div class="week-card" data-week="6">
+                    <div class="week-header">
+                        <div class="week-number">06</div>
+                        <h3 class="week-title">Introducción a C++</h3>
+                    </div>
+                    <p class="week-description">POO: Clases, objetos y encapsulamiento</p>
+                    <a href="semana6.html" class="week-link">
+                        Ver ejercicios
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                </div>
+
+                <!-- Semana 7 -->
+                <div class="week-card" data-week="7">
+                    <div class="week-header">
+                        <div class="week-number">07</div>
+                        <h3 class="week-title">POO Avanzada</h3>
+                    </div>
+                    <p class="week-description">Herencia, polimorfismo y templates</p>
+                    <a href="semana7.html" class="week-link">
+                        Ver ejercicios
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="closing-bracket">}</div>
+        </div>
+    </section>
+
+    <section class="resources-section" id="recursos">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="keyword">namespace</span> <span class="type">Recursos</span> {
+            </h2>
+            <div class="resources-grid">
+                <div class="resource-card">
+                    <div class="resource-icon">📚</div>
+                    <h3>Documentación</h3>
+                    <p>Referencias oficiales de C y C++</p>
+                    <a href="https://en.cppreference.com/" target="_blank" class="resource-link">Ir a cppreference →</a>
+                </div>
+                <div class="resource-card">
+                    <div class="resource-icon">💻</div>
+                    <h3>Compiladores</h3>
+                    <p>Herramientas para ejecutar código</p>
+                    <a href="https://www.onlinegdb.com/" target="_blank" class="resource-link">OnlineGDB →</a>
+                </div>
+                <div class="resource-card">
+                    <div class="resource-icon">🎯</div>
+                    <h3>Práctica</h3>
+                    <p>Ejercicios y desafíos online</p>
+                    <a href="https://www.hackerrank.com/domains/cpp" target="_blank" class="resource-link">HackerRank →</a>
+                </div>
+            </div>
+            <div class="closing-bracket">}</div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-text">
+                <span class="comment">// Desarrollado por Milagros</span><br>
+                <span class="comment">// Curso de Nivelación 2026</span>
+            </p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>

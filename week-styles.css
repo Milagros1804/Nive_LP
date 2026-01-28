@@ -1,0 +1,273 @@
+/* Week Content Styles */
+.week-content {
+    padding-top: 120px;
+    padding-bottom: 4rem;
+    min-height: 100vh;
+}
+
+.week-header-section {
+    text-align: center;
+    margin-bottom: 4rem;
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.week-badge {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    color: var(--bg-darker);
+    padding: 0.5rem 1.5rem;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.week-main-title {
+    font-size: 3rem;
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+}
+
+.week-intro {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Exercise Sections */
+.exercise {
+    background: var(--bg-card);
+    border: 1px solid rgba(0, 217, 255, 0.1);
+    border-radius: 12px;
+    padding: 2.5rem;
+    margin-bottom: 3rem;
+    animation: fadeInUp 0.8s ease-out;
+    animation-fill-mode: both;
+}
+
+.exercise:nth-child(2) { animation-delay: 0.1s; }
+.exercise:nth-child(3) { animation-delay: 0.2s; }
+.exercise:nth-child(4) { animation-delay: 0.3s; }
+
+.exercise-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.exercise-title {
+    font-size: 1.8rem;
+    color: var(--text-primary);
+}
+
+.exercise-number {
+    color: var(--primary);
+}
+
+.exercise-tag {
+    background: rgba(0, 217, 255, 0.1);
+    color: var(--primary);
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    border: 1px solid rgba(0, 217, 255, 0.3);
+}
+
+.exercise-description {
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    line-height: 1.8;
+    font-size: 1.05rem;
+}
+
+/* Code Container */
+.code-container {
+    background: #1e1e1e;
+    border: 1px solid rgba(0, 217, 255, 0.2);
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.code-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 1.5rem;
+    background: rgba(0, 217, 255, 0.05);
+    border-bottom: 1px solid rgba(0, 217, 255, 0.2);
+}
+
+.code-title {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    font-family: 'Fira Code', monospace;
+}
+
+.code-title svg {
+    color: var(--primary);
+}
+
+.copy-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(0, 217, 255, 0.1);
+    color: var(--primary);
+    border: 1px solid rgba(0, 217, 255, 0.3);
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    font-family: 'JetBrains Mono', monospace;
+    transition: all 0.3s ease;
+}
+
+.copy-btn:hover {
+    background: rgba(0, 217, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+.copy-btn.copied {
+    background: rgba(130, 170, 255, 0.2);
+    color: var(--success);
+    border-color: var(--success);
+}
+
+.code-container pre {
+    margin: 0;
+    padding: 1.5rem;
+    overflow-x: auto;
+    background: #1e1e1e;
+}
+
+.code-container code {
+    font-family: 'Fira Code', monospace;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* Output Container */
+.output-container {
+    background: var(--code-bg);
+    border: 1px solid rgba(130, 170, 255, 0.3);
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 2rem;
+}
+
+.output-header {
+    display: flex;
+    align-items: center;
+    padding: 0.75rem 1.5rem;
+    background: rgba(130, 170, 255, 0.1);
+    border-bottom: 1px solid rgba(130, 170, 255, 0.3);
+}
+
+.output-title {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--success);
+    font-size: 0.9rem;
+    font-weight: 600;
+    font-family: 'Fira Code', monospace;
+}
+
+.output-title svg {
+    color: var(--success);
+}
+
+.output-content {
+    margin: 0;
+    padding: 1.5rem;
+    color: var(--text-primary);
+    font-family: 'Fira Code', monospace;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    white-space: pre-wrap;
+    background: var(--code-bg);
+}
+
+/* Explanation Box */
+.explanation {
+    background: rgba(199, 146, 234, 0.05);
+    border-left: 4px solid var(--accent);
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-top: 1.5rem;
+}
+
+.explanation h3 {
+    color: var(--accent);
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.explanation ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.explanation li {
+    color: var(--text-secondary);
+    margin-bottom: 0.75rem;
+    padding-left: 1.5rem;
+    position: relative;
+    line-height: 1.6;
+}
+
+.explanation li::before {
+    content: '▹';
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+    font-weight: bold;
+}
+
+.explanation code {
+    background: rgba(0, 217, 255, 0.1);
+    color: var(--primary);
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    font-family: 'Fira Code', monospace;
+    font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .week-content {
+        padding-top: 100px;
+    }
+    
+    .week-main-title {
+        font-size: 2rem;
+    }
+    
+    .exercise {
+        padding: 1.5rem;
+    }
+    
+    .exercise-title {
+        font-size: 1.4rem;
+    }
+    
+    .code-container pre,
+    .output-content {
+        font-size: 0.85rem;
+    }
+}
